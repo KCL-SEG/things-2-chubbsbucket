@@ -4,6 +4,7 @@
 </head>
 <body>
   <form  action = "{% url 'home' %}" method="post">
+    {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Thing">
   </form>
